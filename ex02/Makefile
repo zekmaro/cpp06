@@ -6,30 +6,28 @@
 #    By: anarama <anarama@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/17 14:43:01 by anarama           #+#    #+#              #
-#    Updated: 2024/10/17 14:43:02 by anarama          ###   ########.fr        #
+#    Updated: 2024/10/18 19:14:25 by anarama          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		:= c++
 
-NAME	:= bureaucrat
+NAME	:= random
 
 CFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
 OBJDIR	:= obj
 
-HEADERS	:=	AForm.hpp \
-			Bureaucrat.hpp \
-			PresidentialPardonForm.hpp \
-			RobotomyRequestForm.hpp \
-			ShrubberyCreationForm.hpp
+HEADERS	:=	A.hpp \
+			B.hpp \
+			Base.hpp \
+			C.hpp
 
 SRC		:=	main.cpp \
-			AForm.cpp \
-			Bureaucrat.cpp \
-			PresidentialPardonForm.cpp \
-			RobotomyRequestForm.cpp \
-			ShrubberyCreationForm.cpp
+			A.cpp \
+			B.cpp \
+			Base.cpp \
+			C.cpp
 
 OBJ		:= $(SRC:%.cpp=$(OBJDIR)/%.o)
 

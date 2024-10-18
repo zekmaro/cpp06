@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:01:03 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/17 16:02:20 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/18 19:10:47 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 # define BASE_HPP
 
 class Base {
-	
+	public:
+		virtual ~Base();
 };
 
 #endif // BASE_HPP

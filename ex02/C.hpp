@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:01:08 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/17 16:03:26 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/18 19:11:10 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 # include "Base.hpp"
 
-class C: public Base {
-	
-};
+class C: public Base {};
 
 #endif // C_HPP
