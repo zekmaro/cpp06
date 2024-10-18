@@ -6,14 +6,16 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 15:01:58 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/17 15:05:58 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/18 18:59:57 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SERIALIZER_HPP
 # define SERIALIZER_HPP
 
-# include <cstdint>
+#include <stdint.h>
+
+# include "Data.hpp"
 
 class Serializer {
 	private:
