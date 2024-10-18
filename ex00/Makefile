@@ -6,30 +6,22 @@
 #    By: anarama <anarama@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/17 14:43:01 by anarama           #+#    #+#              #
-#    Updated: 2024/10/17 14:43:02 by anarama          ###   ########.fr        #
+#    Updated: 2024/10/18 17:28:32 by anarama          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC		:= c++
 
-NAME	:= bureaucrat
+NAME	:= convert
 
 CFLAGS	:= -Wall -Wextra -Werror -std=c++98
 
 OBJDIR	:= obj
 
-HEADERS	:=	AForm.hpp \
-			Bureaucrat.hpp \
-			PresidentialPardonForm.hpp \
-			RobotomyRequestForm.hpp \
-			ShrubberyCreationForm.hpp
+HEADERS	:=	ScalarConverter.hpp
 
 SRC		:=	main.cpp \
-			AForm.cpp \
-			Bureaucrat.cpp \
-			PresidentialPardonForm.cpp \
-			RobotomyRequestForm.cpp \
-			ShrubberyCreationForm.cpp
+			ScalarConverter.cpp
 
 OBJ		:= $(SRC:%.cpp=$(OBJDIR)/%.o)
 

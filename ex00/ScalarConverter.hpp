@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:43:53 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/17 17:40:38 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/18 17:35:24 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,13 @@ class ScalarConverter {
 		~ScalarConverter( void );
 
 	public:
-		static void convert( std::string str );
-	
-		class EmptyStringException: public std::exception {
-			public:
-				const char* what() const throw();
-		};
-
-		class MultipleCharsException: public std::exception {
-			public:
-				const char* what() const throw();
-		};
+		static void convert( const std::string& str );
 		
+		
+		class IncorrectFormatException: public std::exception {
+			public:
+				const char* what() const throw();
+		};
 };
 
 #endif // SCALARCONVERTER_HPP
