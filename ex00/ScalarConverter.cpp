@@ -6,7 +6,7 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:43:50 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/18 17:57:32 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/31 11:08:03 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	ToInt( double value ) {
 	}
 }
 
-void ToFloat(double value) {
+void ToFloat( double value ) {
     if (std::isnan(value)) {
         std::cout << "float: nanf" << std::endl;
     } else if (std::isinf(value)) {
@@ -54,7 +54,7 @@ void ToFloat(double value) {
     }
 }
 
-void ToDouble(double value) {
+void ToDouble( double value ) {
     if (std::isnan(value)) {
         std::cout << "double: nan" << std::endl;
     } else if (std::isinf(value)) {
@@ -80,7 +80,6 @@ void ScalarConverter::convert( const std::string& str ) {
 			throw ScalarConverter::IncorrectFormatException();
 		}
 	}
-	std::cout << value << std::endl;
 	ToChar(value);
 	ToInt(value);
 	ToFloat(value);

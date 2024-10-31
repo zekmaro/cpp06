@@ -6,11 +6,10 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:00:46 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/18 19:48:37 by anarama          ###   ########.fr       */
+/*   Updated: 2024/10/31 11:31:08 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <exception>
 #include <iostream>
 #include <cstdlib>   // For rand() and srand()
 #include <ctime>     // For time()
@@ -25,26 +24,26 @@ void identify(Base& p) {
 	try {
 		A& a = dynamic_cast<A&>(p);
 		(void)a;
-		std::cout << "AH! Its was class A refernce. No way!" << std::endl;
+		std::cout << "AH! Its was class A reference. No way!" << std::endl;
 		return ;
 	} catch (std::bad_cast& e) {
-		std::cout << "Something went terribly wrong..." << std::endl;
+		std::cout << "Nope its not A refernce..." << std::endl;
 	}
     try {
 		B& b = dynamic_cast<B&>(p);
 		(void)b;
-		std::cout << "AH! Its was class B refernce. No way!" << std::endl;
+		std::cout << "AH! Its was class B reference. No way!" << std::endl;
 		return ;
 	} catch (std::bad_cast& e) {
-		std::cout << "Something went terribly wrong..." << std::endl;
+		std::cout << "Nope its not B refernce..." << std::endl;
 	}
 	try {
 		C& c = dynamic_cast<C&>(p);
 		(void)c;
-		std::cout << "AH! Its was class C refernce. No way!" << std::endl;
+		std::cout << "AH! Its was class C reference. No way!" << std::endl;
 		return ;
 	} catch (std::bad_cast& e) {
-		std::cout << "Something went terribly wrong..." << std::endl;
+		std::cout << "Nope its not C refernce..." << std::endl;
 	}
 }
 
@@ -74,7 +73,7 @@ Base* generate( void ) {
 		case 2:
 			return new C();
 		default:
-			std::cout << "Something went terribly wrong..." << std::endl;
+			std::cout << "Math is not mathing..." << std::endl;
 			return NULL;
 	}
 }
@@ -84,6 +83,7 @@ int main(void) {
 	
 	Base* ptr = generate();
 	if (ptr == NULL) {
+		std::cout << "Maybe coding is not for me?" << std::endl;
 		return 1;
 	}
 	identify(ptr);

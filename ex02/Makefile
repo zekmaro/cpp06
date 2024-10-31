@@ -6,7 +6,7 @@
 #    By: anarama <anarama@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/17 14:43:01 by anarama           #+#    #+#              #
-#    Updated: 2024/10/18 19:14:25 by anarama          ###   ########.fr        #
+#    Updated: 2024/10/31 11:24:57 by anarama          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,7 @@ HEADERS	:=	A.hpp \
 			C.hpp
 
 SRC		:=	main.cpp \
-			A.cpp \
-			B.cpp \
-			Base.cpp \
-			C.cpp
+			Base.cpp 
 
 OBJ		:= $(SRC:%.cpp=$(OBJDIR)/%.o)
 
