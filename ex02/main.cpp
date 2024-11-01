@@ -6,14 +6,14 @@
 /*   By: anarama <anarama@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 16:00:46 by anarama           #+#    #+#             */
-/*   Updated: 2024/10/31 11:31:08 by anarama          ###   ########.fr       */
+/*   Updated: 2024/11/01 12:50:02 by anarama          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <exception>
 #include <iostream>
 #include <cstdlib>   // For rand() and srand()
 #include <ctime>     // For time()
-#include <typeinfo>
 
 #include "Base.hpp"
 #include "A.hpp"
@@ -26,7 +26,7 @@ void identify(Base& p) {
 		(void)a;
 		std::cout << "AH! Its was class A reference. No way!" << std::endl;
 		return ;
-	} catch (std::bad_cast& e) {
+	} catch (std::exception& e) {
 		std::cout << "Nope its not A refernce..." << std::endl;
 	}
     try {
@@ -34,7 +34,7 @@ void identify(Base& p) {
 		(void)b;
 		std::cout << "AH! Its was class B reference. No way!" << std::endl;
 		return ;
-	} catch (std::bad_cast& e) {
+	} catch (std::exception& e) {
 		std::cout << "Nope its not B refernce..." << std::endl;
 	}
 	try {
@@ -42,7 +42,7 @@ void identify(Base& p) {
 		(void)c;
 		std::cout << "AH! Its was class C reference. No way!" << std::endl;
 		return ;
-	} catch (std::bad_cast& e) {
+	} catch (std::exception& e) {
 		std::cout << "Nope its not C refernce..." << std::endl;
 	}
 }
@@ -67,10 +67,13 @@ Base* generate( void ) {
 	
 	switch (randomNumber) {
 		case 0:
+			std::cout << "A was created!" << std::endl;
 			return new A();
 		case 1:
+			std::cout << "B was created!" << std::endl;
 			return new B();
 		case 2:
+			std::cout << "C was created!" << std::endl;
 			return new C();
 		default:
 			std::cout << "Math is not mathing..." << std::endl;
